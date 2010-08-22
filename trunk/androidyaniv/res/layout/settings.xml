@@ -25,6 +25,18 @@ android:text="Auto-Sort Hand"
 >
 </CheckBox>
 </TableRow>
+
+<TableRow
+android:id="@+id/widget66"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
 <TableRow
 android:id="@+id/widget64"
 android:layout_width="fill_parent"
@@ -59,5 +71,16 @@ android:text="Sort by Value"
 </RadioButton>
 </RadioGroup>
 </TableRow>
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
 </LinearLayout>
 </ScrollView>
