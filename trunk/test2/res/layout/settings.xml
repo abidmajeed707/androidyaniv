@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+android:id="@+id/widget53"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<LinearLayout
+android:id="@+id/widget61"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+<TableRow
+android:id="@+id/widget62"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<CheckBox
+android:id="@+id/sortHand"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Auto-Sort Hand"
+>
+</CheckBox>
+</TableRow>
+
+<TableRow
+android:id="@+id/widget66"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
+<TableRow
+android:id="@+id/widget64"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<RadioGroup
+android:id="@+id/widget65"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+<RadioButton
+android:id="@+id/sortFace"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Face">
+</RadioButton>
+<RadioButton
+android:id="@+id/sortSuit"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Suit"
+>
+</RadioButton>
+<RadioButton
+android:id="@+id/sortValue"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Value"
+>
+</RadioButton>
+</RadioGroup>
+</TableRow>
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
+</LinearLayout>
+</ScrollView>
