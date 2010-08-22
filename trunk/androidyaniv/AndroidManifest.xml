@@ -14,6 +14,7 @@
 </intent-filter>
 </activity>
 <activity android:name=".ui.ScoreView"></activity>
+<activity android:name=".ui.Settings"></activity>
 </application>
     <uses-sdk android:targetSdkVersion="7" android:minSdkVersion="7" android:maxSdkVersion="8"/>
 
