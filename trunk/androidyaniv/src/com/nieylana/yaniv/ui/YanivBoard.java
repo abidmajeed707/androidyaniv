@@ -48,7 +48,7 @@ public class YanivBoard extends Activity {
 				if (game.getPlayer(game.getCurrentPlayer()).canDrop()!=Player.DROPINVALID){
 					game.endCurrentTurn();
 				}else{
-					Toast.makeText(v.getContext(), "Invalid Move", Toast.LENGTH_SHORT);
+					Toast.makeText(v.getContext(), "Move is invalid", Toast.LENGTH_SHORT);
 				}
 				
 			}
