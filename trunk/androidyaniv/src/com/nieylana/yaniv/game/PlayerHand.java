@@ -84,8 +84,18 @@ public class PlayerHand {
 	}
 	
 	public void sortHand(SortMethod method){
+		
+		ArrayList <PlayingCard> al = new ArrayList<PlayingCard> (Arrays.asList(cards));
+		al.removeAll(Collections.singleton(null));
+		PlayingCard temp[] = new PlayingCard[al.size()];
+		al.toArray(temp);
+
 		PlayingCard.sortType = method;
-		Arrays.sort(cards);
+		Arrays.sort(temp);
+		
+		al = new ArrayList<PlayingCard> (Arrays.asList(temp));
+		cards = new PlayingCard[5];
+		al.toArray(cards);
 		redraw();
 	}
 	
