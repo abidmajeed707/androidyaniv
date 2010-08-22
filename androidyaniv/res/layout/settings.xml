@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+android:id="@+id/widget29"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<LinearLayout
+android:id="@+id/widget40"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+<CheckBox
+android:id="@+id/sortHand"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Auto-Sort Hand"
+>
+</CheckBox>
+<RadioGroup
+android:id="@+id/widget43"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+<RadioButton
+android:id="@+id/sortFace"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Face"
+>
+</RadioButton>
+<RadioButton
+android:id="@+id/sortSuit"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Suit"
+>
+</RadioButton>
+<RadioButton
+android:id="@+id/sortValue"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Sort by Value"
+>
+</RadioButton>
+</RadioGroup>
+</LinearLayout>
+</ScrollView>

@@ -188,6 +188,7 @@ public class YanivBoard extends Activity {
     public boolean onCreateOptionsMenu(Menu menu){
     	
     	menu.add(0, 1, 0, "View Scores");
+    	menu.add(0,2,0,"Settings");
     	return true;
     }
     
@@ -196,7 +197,11 @@ public class YanivBoard extends Activity {
     	
     	case 1:
     		Intent intent = new Intent(YanivBoard.this, ScoreView.class);
-    		startActivityForResult(intent,0); 
+    		startActivityForResult(intent,0);
+    		break;
+    	case 2:
+    		//settings menu
+    		
     	}
     	
     	return true;

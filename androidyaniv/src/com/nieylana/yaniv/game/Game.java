@@ -209,7 +209,6 @@ public class Game {
 				}
 			}
 		}
-		scoreKeeper.addRound(player, assafCaller, players);
 		if (assaf){
 			sb.append(" but " + assafCaller.toString() + " called Assaf with a score of " + assafCaller.getCurrentScore());
 		}
@@ -235,10 +234,12 @@ public class Game {
 			}
 		});
 		adb.create().show();
-		
+		scoreKeeper.addRound(player, assafCaller, players);
+		yanivButton.setVisibility(View.INVISIBLE);
 	}
 
 	public void endGame(boolean dealNext) {
+		//TODO: add who won
 		if (dealNext){
 			this.dealCards();
 			//find the winner
@@ -250,13 +251,13 @@ public class Game {
 			}
 			startNextTurn();
 		}else{
-			AlertDialog.Builder adb = new AlertDialog.Builder(YanivBoard.mContext);
+			AlertDialog.Builder adb = new AlertDialog.Builder(deckView.getContext());
 			adb.setMessage("Game Over!");
 			adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				
 				public void onClick(DialogInterface dialog, int which) {
 					dialog.dismiss();
-					
+					 
 				}
 			});
 			adb.create().show();
