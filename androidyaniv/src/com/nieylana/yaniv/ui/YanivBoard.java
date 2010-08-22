@@ -20,7 +20,6 @@ import android.widget.Toast;
 public class YanivBoard extends Activity {
 	class endTurnListener implements OnClickListener {
 
-		@Override
 		public void onClick(View v) {
 			if (v.getId() == R.id.btnNext){
 				if (game.getCurrentPlayer() != 0){
@@ -75,7 +74,6 @@ public class YanivBoard extends Activity {
 	}
 	class yanivListener implements OnClickListener{
 
-		@Override
 		public void onClick(View v) {
 			game.performYaniv(v.getContext(), game.getPlayer(0));
 		}
@@ -99,7 +97,6 @@ public class YanivBoard extends Activity {
         
         
         findViewById(R.id.deck1).setOnClickListener(new OnClickListener() {
-			@Override
 			public void onClick(View arg0) {
 				//
 			}
@@ -107,7 +104,6 @@ public class YanivBoard extends Activity {
         
         findViewById(R.id.btnNext).setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View arg0) {
 				Toast.makeText(arg0.getContext(), "" + game.getPlayer(0).canDrop(),Toast.LENGTH_SHORT).show();
 			}
@@ -201,7 +197,8 @@ public class YanivBoard extends Activity {
     		break;
     	case 2:
     		//settings menu
-    		
+    		Intent intent2 = new Intent(YanivBoard.this, Settings.class);
+    		startActivityForResult(intent2, 0);
     	}
     	
     	return true;
