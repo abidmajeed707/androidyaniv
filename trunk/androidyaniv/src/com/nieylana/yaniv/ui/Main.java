@@ -19,7 +19,6 @@ public class Main extends Activity {
         Button play = (Button)findViewById(R.id.btnPlay);
         play.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				startGame(); 
