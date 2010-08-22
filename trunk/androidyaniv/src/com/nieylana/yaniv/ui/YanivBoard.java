@@ -1,13 +1,9 @@
 package com.nieylana.yaniv.ui;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import com.nieylana.yaniv.R;
 import com.nieylana.yaniv.game.Game;
 import com.nieylana.yaniv.game.Player;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -16,10 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 

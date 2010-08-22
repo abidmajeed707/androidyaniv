@@ -2,7 +2,6 @@ package com.nieylana.yaniv.game;
 
 import java.util.Arrays;
 
-import com.nieylana.yaniv.R;
 import com.nieylana.yaniv.ai.BasicAI;
 import com.nieylana.yaniv.game.PlayingCard.SortMethod;
 import com.nieylana.yaniv.ui.YanivBoard;
@@ -11,10 +10,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class Game {
 	private ScoreKeeper scoreKeeper = null;

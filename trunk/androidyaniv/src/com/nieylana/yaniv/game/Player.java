@@ -5,8 +5,6 @@ import java.util.Arrays;
 import com.nieylana.yaniv.ai.BasicAI;
 import com.nieylana.yaniv.game.PlayingCard.Face;
 import com.nieylana.yaniv.game.PlayingCard.SortMethod;
-import com.nieylana.yaniv.game.PlayingCard.Suit;
-
 import android.widget.ImageView;
 
 public class Player {
