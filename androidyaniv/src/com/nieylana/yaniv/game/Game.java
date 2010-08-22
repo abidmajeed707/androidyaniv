@@ -9,6 +9,8 @@ import com.nieylana.yaniv.ui.YanivBoard;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
@@ -138,6 +140,18 @@ public class Game {
 
 	private void startNextTurn() {
 		
+		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(deckView.getContext());
+		if (sharedPrefs.getBoolean("sortHand",false)){
+			SortMethod sm = null;
+			if(sharedPrefs.getBoolean("sortValue", false)){
+				sm = SortMethod.COUNT;
+			}else if(sharedPrefs.getBoolean("sortFace", false)){
+				sm = SortMethod.FACE;
+			}else if(sharedPrefs.getBoolean("sortSuit", false)){
+				sm = SortMethod.SUIT;
+			}
+			players[0].getHand().sortHand(sm);
+		}
 		
 		if (currentPlayer == 0){
 			YanivBoard.updateStatus("Your Turn!");
