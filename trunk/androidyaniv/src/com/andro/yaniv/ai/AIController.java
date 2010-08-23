@@ -9,19 +9,18 @@ import com.andro.yaniv.game.PlayerHand;
 import com.andro.yaniv.game.PlayingCard;
 
 public class AIController {
-	private static YanivAI compAI = null;
 	private static SharedPreferences prefs = null;
 	public static PlayingCard[] getBestDrop(Game game, Player curPlayer) {
 		// TODO Auto-generated method stub
-		
+		YanivAI compAI = null;
 		prefs = PreferenceManager.getDefaultSharedPreferences(game.getContext());
 		String level = prefs.getString("AI_Level", "easy");
 		
 		if (level.equals("easy")){
-			compAI= new BasicAI();
+			compAI= new EasyAI();
 			return compAI.getBestDrop(curPlayer);
 		}else{
-			compAI= new BasicAI();
+			compAI= new ModerateAI();
 			return compAI.getBestDrop(curPlayer);
 		}
 		
@@ -33,10 +32,13 @@ public class AIController {
 		String level = prefs.getString("AI_Level", "easy");
 		
 		if (level.equals("easy")){
-			compAI= new BasicAI();
+			EasyAI compAI = null;
+			compAI= new EasyAI();
 			return compAI.getBestPickup(discardHand);
 		}else{
-			return 0;
+			ModerateAI compAI = null;
+			compAI= new ModerateAI();
+			return compAI.getBestPickup(game.getPlayer(game.getCurrentPlayer()), discardHand);
 		}
 	}
 
