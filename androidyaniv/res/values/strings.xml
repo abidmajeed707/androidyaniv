@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NieyYaniv</string>
+    <string name="issue">Report an Issue</string>
+    <string name="settings">AndroYaniv Settings</string>
+    <string name="scores">Current Scores</string>
+    <string name="app_name">AndroYaniv</string>
 </resources>

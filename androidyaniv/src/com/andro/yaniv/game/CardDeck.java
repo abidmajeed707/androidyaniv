@@ -1,10 +1,10 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.nieylana.yaniv.game.PlayingCard.Suit;
-import com.nieylana.yaniv.game.PlayingCard.Face;
+import com.andro.yaniv.game.PlayingCard.Face;
+import com.andro.yaniv.game.PlayingCard.Suit;
 
 public class CardDeck {
 

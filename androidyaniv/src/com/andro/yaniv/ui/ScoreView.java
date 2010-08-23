@@ -1,9 +1,10 @@
-package com.nieylana.yaniv.ui;
+package com.andro.yaniv.ui;
 
 import java.util.ArrayList;
-import com.nieylana.yaniv.R;
-import com.nieylana.yaniv.game.RoundScore;
-import com.nieylana.yaniv.game.ScoreKeeper;
+
+import com.andro.yaniv.game.RoundScore;
+import com.andro.yaniv.game.ScoreKeeper;
+import com.andro.yaniv.R;
 
 import android.app.Activity;
 import android.os.Bundle;

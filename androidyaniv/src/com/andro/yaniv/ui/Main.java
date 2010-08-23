@@ -1,6 +1,6 @@
-package com.nieylana.yaniv.ui;
+package com.andro.yaniv.ui;
 
-import com.nieylana.yaniv.R;
+import com.andro.yaniv.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -20,12 +20,36 @@ public class Main extends Activity {
         play.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startGame(); 
 			}
 		});
+        
+        Button exit = (Button)findViewById(R.id.btnExit);
+        exit.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish(); 
+			}
+		});
+        
+        
+        Button issues = (Button)findViewById(R.id.btnIssues);
+        issues.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startIssueIntent();
+				
+				
+			}
+		});
+        
     }
-    
+    public void startIssueIntent(){
+    	Intent issueIntent = new Intent(this,IssueReport.class);
+    	startActivity(issueIntent);
+    }
     public void startGame(){
     	Intent myIntent = new Intent(this,YanivBoard.class);
 		startActivity(myIntent); 

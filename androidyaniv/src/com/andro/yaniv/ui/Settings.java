@@ -1,6 +1,6 @@
-package com.nieylana.yaniv.ui;
+package com.andro.yaniv.ui;
 
-import com.nieylana.yaniv.R;
+import com.andro.yaniv.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;

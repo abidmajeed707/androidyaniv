@@ -1,12 +1,12 @@
-package com.nieylana.yaniv.ai;
+package com.andro.yaniv.ai;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.nieylana.yaniv.game.Player;
-import com.nieylana.yaniv.game.PlayerHand;
-import com.nieylana.yaniv.game.PlayingCard;
-import com.nieylana.yaniv.game.PlayingCard.SortMethod;
+import com.andro.yaniv.game.Player;
+import com.andro.yaniv.game.PlayerHand;
+import com.andro.yaniv.game.PlayingCard;
+import com.andro.yaniv.game.PlayingCard.SortMethod;
 
 public class BasicAI {
 

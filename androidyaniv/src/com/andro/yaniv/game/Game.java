@@ -1,10 +1,11 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.nieylana.yaniv.ai.BasicAI;
-import com.nieylana.yaniv.game.PlayingCard.SortMethod;
-import com.nieylana.yaniv.ui.YanivBoard;
+import com.andro.yaniv.ai.BasicAI;
+import com.andro.yaniv.game.PlayingCard.SortMethod;
+import com.andro.yaniv.ui.YanivBoard;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -265,15 +266,33 @@ public class Game {
 			}
 			startNextTurn();
 		}else{
+			
+			ArrayList<RoundScore> rounds = ScoreKeeper.getScores();
+			
+			RoundScore sum = rounds.get(rounds.size()-1);
+			
+			int lowScore = sum.scores[0];
+			int lowPlayer = 0;
+			
+			for (int x = 0; x < sum.scores.length;x++){
+				if (sum.scores[x] < lowScore){
+					lowScore = sum.scores[x];
+					lowPlayer = x;
+				}
+			}
 			AlertDialog.Builder adb = new AlertDialog.Builder(deckView.getContext());
-			adb.setMessage("Game Over!");
+			adb.setTitle("Result");
+			if (lowPlayer == 0){
+				adb.setMessage("You Won!");
+			}else{
+				adb.setMessage(players[lowPlayer].toString() + " Won!");
+			}
 			adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				
 				public void onClick(DialogInterface dialog, int which) {
 					dialog.dismiss();
-					 
 				}
 			});
+				
 			adb.create().show();
 			scoreKeeper.clear();
 			dealCards();

@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+android:id="@+id/main"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:padding="50px"
 android:orientation="vertical"
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/main" android:background="@drawable/mainbackground">
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:background="@drawable/mainbackground"
+>
 <Button
 android:id="@+id/btnPlay"
 android:layout_width="220px"
 android:layout_height="50px"
+android:layout_marginTop="20px"
 android:text="Play Yaniv!"
+android:layout_gravity="center_vertical"
+>
+</Button>
+<Button
+android:id="@+id/btnIssues"
+android:layout_width="fill_parent"
+android:layout_height="50px"
+android:text="Report Issue"
+android:layout_gravity="center_vertical"
 >
 </Button>
 <Button
 android:id="@+id/btnExit"
 android:layout_width="220px"
 android:layout_height="50px"
-android:text="Exit Game!"
+android:text="Exit Game"
+android:layout_gravity="center_vertical"
 >
 </Button>
 </LinearLayout>

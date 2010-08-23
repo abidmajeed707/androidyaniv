@@ -1,4 +1,4 @@
-package com.nieylana.yaniv.ai;
+package com.andro.yaniv.ai;
 //--------------------------------------
 //Systematically generate combinations.
 //--------------------------------------
