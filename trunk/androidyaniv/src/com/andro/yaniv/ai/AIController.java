@@ -21,7 +21,8 @@ public class AIController {
 			compAI= new BasicAI();
 			return compAI.getBestDrop(curPlayer);
 		}else{
-			return null;
+			compAI= new BasicAI();
+			return compAI.getBestDrop(curPlayer);
 		}
 		
 	}

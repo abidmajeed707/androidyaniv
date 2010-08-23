@@ -34,6 +34,16 @@ public class Settings extends Activity {
 		((RadioButton)findViewById(R.id.sortSuit)).setEnabled(shouldSort);
 		
 		
+		String aiLevel=sharedPrefs.getString("AI_Level","easy");
+		if (aiLevel.equals("easy")){
+			((RadioButton)findViewById(R.id.aiEasy)).setChecked(true);
+		}else if(aiLevel.equals("moderate")){
+			((RadioButton)findViewById(R.id.aiModerate)).setChecked(true);
+		}else if(aiLevel.equals("insane")){
+			((RadioButton)findViewById(R.id.aiInsane)).setChecked(true);
+		}
+
+		
 		sortHand.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
@@ -52,7 +62,12 @@ public class Settings extends Activity {
 		((RadioButton)findViewById(R.id.sortFace)).setOnClickListener(rl);
 		((RadioButton)findViewById(R.id.sortValue)).setOnClickListener(rl);
 		((RadioButton)findViewById(R.id.sortSuit)).setOnClickListener(rl);
+		((RadioButton)findViewById(R.id.aiEasy)).setOnClickListener(rl);
+		((RadioButton)findViewById(R.id.aiModerate)).setOnClickListener(rl);
+		((RadioButton)findViewById(R.id.aiInsane)).setOnClickListener(rl);
+		
 	}
+
 	
 	class RadioListener implements OnClickListener{
 
@@ -75,6 +90,16 @@ public class Settings extends Activity {
 				ed.putBoolean("sortFace",false);
 				ed.putBoolean("sortValue",false);
 				ed.putBoolean("sortSuit",true);
+				break;
+			case R.id.aiEasy:
+				ed.putString("AI_Level","easy");
+				break;
+			case R.id.aiModerate:
+				ed.putString("AI_Level","moderate");
+				break;
+			case R.id.aiInsane:
+				ed.putString("AI_Level","insane");
+				break;
 			}
 			ed.commit();
 		}

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.andro.yaniv.ai.AIController;
-import com.andro.yaniv.ai.BasicAI;
 import com.andro.yaniv.game.PlayingCard.SortMethod;
 import com.andro.yaniv.ui.YanivBoard;
 
@@ -17,7 +16,11 @@ import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-public class Game {
+public class Game  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ScoreKeeper scoreKeeper = null;
 	private CardDeck deck = new CardDeck();
 	private Player players[] = new Player[4];
@@ -84,7 +87,18 @@ public class Game {
 				players[x].getHand().getCardView(y).startAnimation(ta);
 			}
 		}
-		
+		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(deckView.getContext());
+		if (sharedPrefs.getBoolean("sortHand",false)){
+			SortMethod sm = null;
+			if(sharedPrefs.getBoolean("sortValue", false)){
+				sm = SortMethod.COUNT;
+			}else if(sharedPrefs.getBoolean("sortFace", false)){
+				sm = SortMethod.FACE;
+			}else if(sharedPrefs.getBoolean("sortSuit", false)){
+				sm = SortMethod.SUIT;
+			}
+			players[0].getHand().sortHand(sm);
+		}
 		players[0].getHand().redraw();
 	}
 	

@@ -206,6 +206,7 @@ public class YanivBoard extends Activity {
     		//settings menu
     		Intent intent2 = new Intent(YanivBoard.this, Settings.class);
     		startActivityForResult(intent2, 0);
+    		
     		break;
     	case 3:
     		game.getPlayer(0).getHand().deselectAllCards();
