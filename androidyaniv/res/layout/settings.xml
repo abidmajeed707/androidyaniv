@@ -11,6 +11,35 @@ android:layout_width="fill_parent"
 android:layout_height="wrap_content"
 android:orientation="vertical"
 >
+
+<TableRow
+android:id="@+id/widget90"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<TextView
+android:id="@+id/lblPlayerSetting"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Player Settings"
+android:textStyle="bold"
+android:layout_x="84px"
+android:layout_y="67px"
+/>
+</TableRow>
+
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
 <TableRow
 android:id="@+id/widget62"
 android:layout_width="fill_parent"
@@ -21,22 +50,10 @@ android:orientation="horizontal"
 android:id="@+id/sortHand"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:text="Auto-Sort Hand"
->
+android:text="Auto-Sort Hand" android:layout_marginLeft="35px">
 </CheckBox>
 </TableRow>
 
-<TableRow
-android:id="@+id/widget66"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
->
-<View
- android:layout_width="fill_parent"
- android:layout_height="2dip"
- android:background="#FFFFFFFF" />
- </TableRow>
 <TableRow
 android:id="@+id/widget64"
 android:layout_width="fill_parent"
@@ -53,21 +70,94 @@ android:orientation="vertical"
 android:id="@+id/sortFace"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:text="Sort by Face">
+android:text="Sort by Face" android:layout_marginLeft="70px">
 </RadioButton>
 <RadioButton
 android:id="@+id/sortSuit"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:text="Sort by Suit"
->
+android:text="Sort by Suit" android:layout_marginLeft="70px">
 </RadioButton>
 <RadioButton
 android:id="@+id/sortValue"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:text="Sort by Value"
+android:text="Sort by Value" android:layout_marginLeft="70px">
+</RadioButton>
+</RadioGroup>
+</TableRow>
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
 >
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<TextView
+android:id="@+id/lblAISetting"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="AI Settings"
+android:textStyle="bold"
+android:layout_x="84px"
+android:layout_y="67px"
+/>
+</TableRow>
+
+<TableRow
+android:id="@+id/widget67"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<View
+ android:layout_width="fill_parent"
+ android:layout_height="2dip"
+ android:background="#FFFFFFFF" />
+ </TableRow>
+
+<TableRow
+android:id="@+id/widget91"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+<RadioGroup
+android:id="@+id/widget92"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+<RadioButton
+android:id="@+id/aiEasy"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Easy" 
+android:layout_marginLeft="35px">
+</RadioButton>
+<RadioButton
+android:id="@+id/aiModerate"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Moderate"
+android:layout_marginLeft="35px">
+</RadioButton>
+<RadioButton
+android:id="@+id/aiInsane"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="Insane"
+android:layout_marginLeft="35px">
 </RadioButton>
 </RadioGroup>
 </TableRow>

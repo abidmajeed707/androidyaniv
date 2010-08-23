@@ -6,7 +6,7 @@ import java.util.Random;
 import com.andro.yaniv.game.PlayingCard.Face;
 import com.andro.yaniv.game.PlayingCard.Suit;
 
-public class CardDeck {
+public class CardDeck{
 
 	ArrayList<PlayingCard> cards = new ArrayList<PlayingCard>();
 	

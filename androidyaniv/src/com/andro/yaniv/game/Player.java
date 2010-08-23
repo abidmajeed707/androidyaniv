@@ -3,13 +3,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.andro.yaniv.ai.AIController;
-import com.andro.yaniv.ai.BasicAI;
 import com.andro.yaniv.game.PlayingCard.Face;
 import com.andro.yaniv.game.PlayingCard.SortMethod;
 
 import android.widget.ImageView;
 
-public class Player {
+public class Player{
 	public static final int HUMAN = 1;
 	public static final int COMPUTER = 2;
 	

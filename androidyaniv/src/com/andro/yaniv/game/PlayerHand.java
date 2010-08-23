@@ -11,7 +11,7 @@ import com.andro.yaniv.R;
 import android.view.View;
 import android.widget.ImageView;
 
-public class PlayerHand {
+public class PlayerHand{
 	protected PlayingCard cards[] = new PlayingCard[5];
 	protected ImageView views[] = null;
 	private int cardCount = 0;
