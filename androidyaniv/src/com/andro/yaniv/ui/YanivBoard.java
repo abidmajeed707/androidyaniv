@@ -2,8 +2,10 @@ package com.andro.yaniv.ui;
 
 import java.util.ArrayList;
 
+import com.andro.yaniv.ai.AIController;
 import com.andro.yaniv.game.Game;
 import com.andro.yaniv.game.Player;
+import com.andro.yaniv.game.PlayingCard;
 import com.andro.yaniv.R;
 import android.app.Activity;
 import android.content.Context;
@@ -182,13 +184,17 @@ public class YanivBoard extends Activity {
         game.PlayGame();
     }
     
-    public boolean onCreateOptionsMenu(Menu menu){
-    	
+    public boolean onPrepareOptionsMenu(Menu menu){
+    	menu.clear();
     	menu.add(0, 1, 0, "View Scores");
+		menu.add(0,3,0,"Hint");
     	menu.add(0,2,0,"Settings");
+    	
+    	if (game.getCurrentPlayer() != 0){
+    		menu.removeItem(3);
+    	}
     	return true;
     }
-    
     public boolean onOptionsItemSelected(MenuItem item){
     	switch(item.getItemId()){
     	
@@ -200,6 +206,15 @@ public class YanivBoard extends Activity {
     		//settings menu
     		Intent intent2 = new Intent(YanivBoard.this, Settings.class);
     		startActivityForResult(intent2, 0);
+    	case 3:
+    		game.getPlayer(0).getHand().deselectAllCards();
+    		PlayingCard[] hint = AIController.getBestDrop(game, game.getPlayer(0));
+    		for (PlayingCard curCard : hint){
+    			if (!curCard.isSelected()){
+    				curCard.toggleSelected();
+    			}
+    		}
+    		game.getPlayer(0).getHand().redraw();
     	}
     	
     	return true;
