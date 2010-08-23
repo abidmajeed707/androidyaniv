@@ -165,4 +165,13 @@ public class PlayerHand {
 	public int getHandSum(){
 		return getHandSum(cards);
 	}
+	public void deselectAllCards(){
+		for (PlayingCard card : cards){
+			if (card != null){
+				if (card.isSelected()){
+					card.toggleSelected();
+				}
+			}
+		}
+	}
 }

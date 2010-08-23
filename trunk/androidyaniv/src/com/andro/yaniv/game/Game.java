@@ -3,6 +3,7 @@ package com.andro.yaniv.game;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.andro.yaniv.ai.AIController;
 import com.andro.yaniv.ai.BasicAI;
 import com.andro.yaniv.game.PlayingCard.SortMethod;
 import com.andro.yaniv.ui.YanivBoard;
@@ -164,10 +165,11 @@ public class Game {
 		}else{
 			YanivBoard.updateStatus("Comp" + (currentPlayer+1) + "'s Turn");
 		}
-		players[currentPlayer].selectDropCards();
+		players[currentPlayer].selectDropCards(this);
 		
 		if (currentPlayer != 0){
-			players[currentPlayer].pickupLocation = BasicAI.getBestPickup(discardHand);
+			
+			players[currentPlayer].pickupLocation = AIController.getBestPickup(this,discardHand);
 			//TODO: try adding Thread.sleep to automate computer players...
 		}
 		
@@ -299,6 +301,8 @@ public class Game {
 			
 		}
 	}
-
+	public Context getContext(){
+		return deckView.getContext();
+	}
 
 }

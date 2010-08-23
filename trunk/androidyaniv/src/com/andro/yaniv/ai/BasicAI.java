@@ -1,16 +1,13 @@
 package com.andro.yaniv.ai;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import com.andro.yaniv.game.Player;
 import com.andro.yaniv.game.PlayerHand;
 import com.andro.yaniv.game.PlayingCard;
-import com.andro.yaniv.game.PlayingCard.SortMethod;
 
-public class BasicAI {
+public class BasicAI extends YanivAI{
 
-	public static PlayingCard[] getBestDrop(Player curPlayer){
+	public PlayingCard[] getBestDrop(Player curPlayer){
 		PlayerHand playerHand = curPlayer.getHand();
 		ArrayList<PlayingCard[]> listOfHands = new ArrayList<PlayingCard[]>();
 		ArrayList<PlayingCard> possibleHand = new ArrayList<PlayingCard>();
@@ -55,33 +52,7 @@ public class BasicAI {
         return highestHand;
 	}
 	
-	private static PlayingCard[] sortCardsForDrop(Player player,PlayingCard[] originalSelected){
-		
-		int dropType = player.validateDrop(originalSelected);		
-		
-		switch(dropType){
-		case Player.DROPPAIR:
-			// sort for pair
-			PlayingCard.sortType = SortMethod.FACE;
-			Arrays.sort(originalSelected);
-			break;
-		case Player.DROPSAME:
-			// sort for same
-			PlayingCard.sortType = SortMethod.FACE;
-			Arrays.sort(originalSelected);
-			break;
-		case Player.DROPRUN:
-			// sort for run
-			
-			
-			
-			
-		}
-		
-		return originalSelected;
-	}
-
-	public static int getBestPickup(PlayerHand discardHand) {
+	public int getBestPickup(PlayerHand discardHand) {
 		try{
 			if (discardHand.getCard(discardHand.getCardCount()-1).getCountValue() > 5){
 				return Player.DECK;

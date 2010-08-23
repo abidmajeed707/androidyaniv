@@ -2,6 +2,7 @@ package com.andro.yaniv.game;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.andro.yaniv.ai.AIController;
 import com.andro.yaniv.ai.BasicAI;
 import com.andro.yaniv.game.PlayingCard.Face;
 import com.andro.yaniv.game.PlayingCard.SortMethod;
@@ -138,10 +139,10 @@ public class Player {
 		return retVal;
 	}
 	
-	public void selectDropCards(){
+	public void selectDropCards(Game game){
 		if (hand.getPlayerType() == COMPUTER){
 			//TODO do AI SHIT HERE
-			PlayingCard[] bestDrop = BasicAI.getBestDrop(this);
+			PlayingCard[] bestDrop = AIController.getBestDrop(game,this);
 			for (int x = 0; x < bestDrop.length; x++){
 				bestDrop[x].toggleSelected();
 			}
