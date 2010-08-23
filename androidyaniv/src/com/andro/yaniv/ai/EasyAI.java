@@ -51,7 +51,7 @@ public class EasyAI extends YanivAI{
         }
         return highestHand;
 	}
-	
+
 	public int getBestPickup(PlayerHand discardHand) {
 		try{
 			if (discardHand.getCard(discardHand.getCardCount()-1).getCountValue() > 5){

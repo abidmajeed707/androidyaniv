@@ -17,6 +17,10 @@ public class PlayerHand{
 	private int cardCount = 0;
 	protected int playerType = 2;
 	
+	public PlayingCard[] getCards(){
+		return cards;
+	}
+	
 	public PlayerHand(ImageView[] imageViews, int playerType){
 		views = imageViews;
 		this.playerType = playerType;
