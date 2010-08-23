@@ -1,9 +1,9 @@
-package com.nieylana.yaniv.ui;
+package com.andro.yaniv.ui;
 
 import java.util.List;
 
-import com.nieylana.yaniv.R;
-import com.nieylana.yaniv.game.RoundScore;
+import com.andro.yaniv.game.RoundScore;
+import com.andro.yaniv.R;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;

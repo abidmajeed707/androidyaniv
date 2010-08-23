@@ -1,8 +1,8 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 
 import java.lang.reflect.Field;
 
-import com.nieylana.yaniv.R;
+import com.andro.yaniv.R;
 
 public class PlayingCard implements Comparable<PlayingCard>{
 	public enum Suit {HEART,SPADE,DIAMOND,CLUB};

@@ -1,10 +1,11 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.nieylana.yaniv.ai.BasicAI;
-import com.nieylana.yaniv.game.PlayingCard.Face;
-import com.nieylana.yaniv.game.PlayingCard.SortMethod;
+import com.andro.yaniv.ai.BasicAI;
+import com.andro.yaniv.game.PlayingCard.Face;
+import com.andro.yaniv.game.PlayingCard.SortMethod;
+
 import android.widget.ImageView;
 
 public class Player {

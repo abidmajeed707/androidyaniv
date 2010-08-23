@@ -1,12 +1,12 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import com.nieylana.yaniv.R;
-import com.nieylana.yaniv.game.PlayingCard.SortMethod;
+import com.andro.yaniv.game.PlayingCard.SortMethod;
+import com.andro.yaniv.R;
 
 import android.view.View;
 import android.widget.ImageView;

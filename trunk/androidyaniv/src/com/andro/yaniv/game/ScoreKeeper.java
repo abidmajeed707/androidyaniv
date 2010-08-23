@@ -1,4 +1,4 @@
-package com.nieylana.yaniv.game;
+package com.andro.yaniv.game;
 
 import java.util.ArrayList;
 

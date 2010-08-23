@@ -1,9 +1,10 @@
-package com.nieylana.yaniv.ui;
+package com.andro.yaniv.ui;
 
 import java.util.ArrayList;
-import com.nieylana.yaniv.R;
-import com.nieylana.yaniv.game.Game;
-import com.nieylana.yaniv.game.Player;
+
+import com.andro.yaniv.game.Game;
+import com.andro.yaniv.game.Player;
+import com.andro.yaniv.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
