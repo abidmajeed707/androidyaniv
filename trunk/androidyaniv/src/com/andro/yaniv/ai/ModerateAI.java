@@ -6,7 +6,7 @@ import com.andro.yaniv.game.Player;
 import com.andro.yaniv.game.PlayerHand;
 import com.andro.yaniv.game.PlayingCard;
 
-public class ModerateAI extends EasyAI {
+public class ModerateAI extends YanivAI {
 
 	public int getBestPickup(Player currentPlayer, PlayerHand discardHand) {
 		
@@ -88,6 +88,12 @@ public class ModerateAI extends EasyAI {
         	}
         }
         return highestHand;
+	}
+
+	@Override
+	public PlayingCard[] getBestDrop(Player curPlayer) {
+		EasyAI foo = new EasyAI();
+		return foo.getBestDrop(curPlayer);
 	}
 	
 }

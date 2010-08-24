@@ -13,7 +13,7 @@ public class InsaneAI extends YanivAI {
 	}
 
 	@Override
-	public int getBestPickup(PlayerHand discardHand) {
+	public int getBestPickup(Player currentPlayer, PlayerHand discardHand) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
