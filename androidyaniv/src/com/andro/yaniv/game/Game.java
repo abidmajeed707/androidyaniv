@@ -177,7 +177,7 @@ public class Game  {
 				yanivButton.setVisibility(View.INVISIBLE);
 			}
 		}else{
-			YanivBoard.updateStatus("Comp" + (currentPlayer+1) + "'s Turn");
+			YanivBoard.updateStatus("Comp" + (currentPlayer) + "'s Turn");
 		}
 		players[currentPlayer].selectDropCards(this);
 		

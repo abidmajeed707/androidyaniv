@@ -9,7 +9,7 @@ import com.andro.yaniv.game.PlayingCard.SortMethod;
 
 public abstract class YanivAI {
 
-	public abstract int getBestPickup(PlayerHand discardHand);
+	public abstract int getBestPickup(Player currentPlayer, PlayerHand discardHand);
 	public abstract PlayingCard[] getBestDrop(Player curPlayer);
 	
 	public static PlayingCard[] sortCardsForDrop(Player player,PlayingCard[] originalSelected){

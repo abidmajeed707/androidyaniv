@@ -9,19 +9,19 @@ import com.andro.yaniv.game.PlayerHand;
 import com.andro.yaniv.game.PlayingCard;
 
 public class AIController {
+	private static YanivAI currentAI = null;
 	private static SharedPreferences prefs = null;
 	public static PlayingCard[] getBestDrop(Game game, Player curPlayer) {
 		// TODO Auto-generated method stub
-		YanivAI compAI = null;
 		prefs = PreferenceManager.getDefaultSharedPreferences(game.getContext());
 		String level = prefs.getString("AI_Level", "easy");
 		
 		if (level.equals("easy")){
-			compAI= new EasyAI();
-			return compAI.getBestDrop(curPlayer);
+			currentAI= new EasyAI();
+			return currentAI.getBestDrop(curPlayer);
 		}else{
-			compAI= new ModerateAI();
-			return compAI.getBestDrop(curPlayer);
+			currentAI= new ModerateAI();
+			return currentAI.getBestDrop(curPlayer);
 		}
 		
 	}
@@ -30,15 +30,17 @@ public class AIController {
 		// TODO Auto-generated method stub
 		prefs = PreferenceManager.getDefaultSharedPreferences(game.getContext());
 		String level = prefs.getString("AI_Level", "easy");
-		
-		if (level.equals("easy")){
-			EasyAI compAI = null;
-			compAI= new EasyAI();
-			return compAI.getBestPickup(discardHand);
-		}else{
-			ModerateAI compAI = null;
-			compAI= new ModerateAI();
-			return compAI.getBestPickup(game.getPlayer(game.getCurrentPlayer()), discardHand);
+		try{
+			if (level.equals("easy")){
+				currentAI= new EasyAI();
+				return currentAI.getBestPickup(game.getPlayer(game.getCurrentPlayer()),discardHand);
+			}else{
+				currentAI= new ModerateAI();
+				return currentAI.getBestPickup(game.getPlayer(game.getCurrentPlayer()), discardHand);
+			}
+		}catch(NullPointerException e){
+			e.printStackTrace();
+			return 1;
 		}
 	}
 
